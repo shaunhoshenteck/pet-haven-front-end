@@ -12,7 +12,7 @@ const MainNav = (props) => {
         maxWidth: "200px",
       }}
     >
-      <NavItems />
+      <NavItems onHideNav={props.onHideNav} />
     </SideNav>
   );
 };

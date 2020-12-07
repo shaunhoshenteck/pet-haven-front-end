@@ -7,18 +7,34 @@ import "@fortawesome/free-solid-svg-icons";
 const NavItems = (props) => {
   const element = (item, i) => (
     <div key={i} className="navItem">
-      <Link to={item.link}>
-        <FontAwesomeIcon color={item.color} icon={item.icon} />
+      <Link onClick={props.onHideNav} to={item.link}>
+        <FontAwesomeIcon
+          className="sideNav-icon"
+          color={item.color}
+          icon={item.icon}
+        />
         {item.text}
       </Link>
     </div>
   );
+
   const showLinks = () =>
     RouteLinks.user.map((item, i) => {
       return element(item, i);
     });
 
-  return <div>{showLinks()}</div>;
+  const showAdminLinks = () =>
+    RouteLinks.admin.map((item, i) => {
+      return element(item, i);
+    });
+
+  return (
+    <div>
+      {showLinks()}
+      <div className="nav-split">Admin Options</div>
+      {showAdminLinks()}
+    </div>
+  );
 };
 
 export default NavItems;

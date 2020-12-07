@@ -3,3 +3,22 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.navItem {
+  padding: 2px;
+}
+
+.navItem Link {
+  text-decoration: none;
+}
+
+.sideNav-icon {
+  margin-right: 5px;
+}
+
+.nav-split {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  font-size: 1.2rem;
+}

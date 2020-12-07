@@ -1,4 +1,9 @@
-import { faHome, faSignInAlt } from "@fortawesome/free-solid-svg-icons";
+import {
+  faHome,
+  faSignInAlt,
+  faSignOutAlt,
+  faClipboard,
+} from "@fortawesome/free-solid-svg-icons";
 
 export const RouteLinks = {
   user: [
@@ -18,15 +23,23 @@ export const RouteLinks = {
 
   admin: [
     {
-      icon: "home",
+      icon: faHome,
       text: "Admin",
       link: "/admin",
+      color: "white",
     },
 
     {
-      icon: "sign-out",
+      icon: faSignOutAlt,
       text: "Logout",
       link: "/logout",
+      color: "white",
+    },
+    {
+      icon: faClipboard,
+      text: "Edit Users",
+      link: "/editUsers",
+      color: "white",
     },
   ],
 };

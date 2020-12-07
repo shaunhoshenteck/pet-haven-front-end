@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import MainNav from "./sidenav";
+import { FilterNone } from "@material-ui/icons";
 
 const Header = () => {
   const [mainNav, setMainNav] = useState(false);
@@ -33,7 +34,9 @@ const Header = () => {
         />
       </div>
       <MainNav showNav={mainNav} onHideNav={() => hideNav(false)} />
-      <Link to="/">Pet Haven</Link>
+      <Link style={{ textDecoration: "None", color: "purple" }} to="/">
+        Pet Haven
+      </Link>
     </header>
   );
 };
