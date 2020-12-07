@@ -9,6 +9,7 @@ const NavItems = (props) => {
     <div key={i} className="navItem">
       <Link to={item.link}>
         <FontAwesomeIcon color={item.color} icon={item.icon} />
+        {item.text}
       </Link>
     </div>
   );
