@@ -11,6 +11,11 @@
 .navItem Link {
   text-decoration: none;
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 .sideNav-icon {
   margin-right: 5px;
@@ -21,4 +26,14 @@
   justify-content: center;
   margin-top: 20px;
   font-size: 1.2rem;
+}
+
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.error-label {
+  color: red;
+  font-weight: bold;
 }
