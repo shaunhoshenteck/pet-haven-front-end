@@ -31,7 +31,9 @@ const NavItems = (props) => {
   return (
     <div>
       {showLinks()}
-      <div className="nav-split">Admin Options</div>
+      <div>
+        <div className="nav-split">Admin Options</div>
+      </div>
       {showAdminLinks()}
     </div>
   );
