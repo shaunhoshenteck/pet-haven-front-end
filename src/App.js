@@ -1,6 +1,7 @@
 import React from "react";
 import Home from "./components/Home";
 import Search from "./components/Search";
+import NavBar from './components/NavBar';
 import { createBrowserHistory } from "history";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import "./App.css";
@@ -15,6 +16,7 @@ const App = () => {
     <>
       <BrowserRouter history={history}>
         <MainLayout>
+          <NavBar />
           <Switch>
             <Route exact path="/" component={Home} />
             <Route path="/search" component={Search} />
