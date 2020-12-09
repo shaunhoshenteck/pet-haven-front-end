@@ -11,7 +11,7 @@ import {
 
 export function loginUser({email, password}){
 
-    const request = axios.post('/api/users/login', {email, password})
+    const request = axios.post('https://pet-haven-api.herokuapp.com/api/users/login', {email, password})
     .then( response => response.data )
 
     return {
@@ -22,7 +22,7 @@ export function loginUser({email, password}){
 
 
 export function auth(){
-    const request = axios.get('/api/users/auth')
+    const request = axios.get('https://pet-haven-api.herokuapp.com/api/users/auth')
                     .then(response => response.data);
 
         return {
@@ -32,7 +32,7 @@ export function auth(){
 }
 
 export function logoutUser(){
-    const request = axios.get('/api/users/logout')
+    const request = axios.get('https://pet-haven-api.herokuapp.com/api/users/logout')
                     .then( response => { 
                         return null
                     });
@@ -43,7 +43,7 @@ export function logoutUser(){
 }
 
 export function signupUser({email, password, firstname, lastname, address1, address2, city, state, country, zipcode, role}){
-    const request = axios.post('/api/users/register', {email, password, firstname, lastname, address1, address2, city, state, country, zipcode, role})
+    const request = axios.post('https://pet-haven-api.herokuapp.com/api/users/register', {email, password, firstname, lastname, address1, address2, city, state, country, zipcode, role})
     .then( response => response.data )
 
     return {
