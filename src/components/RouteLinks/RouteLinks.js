@@ -16,8 +16,9 @@ export const RouteLinks = {
     {
       icon: faSignInAlt,
       text: "Login",
-      link: "/userLogin",
+      link: "/log-in",
       color: "black",
+      restricted: true
     },
   ],
 

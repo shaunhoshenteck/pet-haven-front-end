@@ -2,6 +2,7 @@
 export const USER_LOGIN = 'user_login';
 export const USER_AUTH = 'user_auth';
 export const USER_LOGOUT = 'user_logout';
+export const USER_SIGNUP = 'user_signup';
 
 //Filters in SearchBar
 export const SET_TYPE = "set_type";
