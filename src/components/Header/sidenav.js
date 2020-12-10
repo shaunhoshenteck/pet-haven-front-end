@@ -8,7 +8,7 @@ const MainNav = (props) => {
       showNav={props.showNav}
       onHideNav={props.onHideNav}
       navStyle={{
-        background: "green",
+        background: "#F5FFFA",
         maxWidth: "200px",
       }}
     >

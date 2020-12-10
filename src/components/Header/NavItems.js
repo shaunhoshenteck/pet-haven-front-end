@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 import { RouteLinks } from "../RouteLinks/RouteLinks";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "@fortawesome/free-solid-svg-icons";
@@ -20,7 +21,12 @@ const NavItems = (props) => {
 
   const showLinks = () =>
     RouteLinks.user.map((item, i) => {
-      return element(item, i);
+
+        if(props.user.auth && item.restricted){
+            return null
+        }else {
+            return element(item,i)
+        }
     });
 
   const showAdminLinks = () =>
@@ -31,10 +37,22 @@ const NavItems = (props) => {
   return (
     <div>
       {showLinks()}
-      <div className="nav-split">Admin Options</div>
-      {showAdminLinks()}
+      { props.user.auth ?
+                <div>
+                    <div className="nav_split">
+                        Admin options
+                    </div>
+                    {showAdminLinks()}
+                </div>
+            :null}
     </div>
   );
 };
 
-export default NavItems;
+function mapStateToProps(state){
+  return{
+      user:state.user
+  }
+}
+
+export default connect(mapStateToProps)(NavItems);

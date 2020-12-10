@@ -11,13 +11,14 @@ export const RouteLinks = {
       icon: faHome,
       text: "Home",
       link: "/",
-      color: "white",
+      color: "black",
     },
     {
       icon: faSignInAlt,
       text: "Login",
-      link: "/userLogin",
-      color: "white",
+      link: "/log-in",
+      color: "black",
+      restricted: true
     },
   ],
 
@@ -26,20 +27,20 @@ export const RouteLinks = {
       icon: faHome,
       text: "Admin",
       link: "/admin",
-      color: "white",
+      color: "black",
     },
 
     {
       icon: faSignOutAlt,
       text: "Logout",
       link: "/logout",
-      color: "white",
+      color: "black",
     },
     {
       icon: faClipboard,
       text: "Edit Users",
       link: "/editUsers",
-      color: "white",
+      color: "black",
     },
   ],
 };

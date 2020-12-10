@@ -11,7 +11,7 @@ const NavBar = () => {
             <Navbar bg="dark" variant="dark">
                 <Navbar.Brand href="#home">Pet Haven</Navbar.Brand>
                 <Nav className="mr-auto">
-                    <Nav.Link href="#">Home</Nav.Link>
+                    <Nav.Link href="./">Home</Nav.Link>
                     <Nav.Link href="#my-account">MyAccount</Nav.Link> 
                 </Nav>
                 <Nav>
