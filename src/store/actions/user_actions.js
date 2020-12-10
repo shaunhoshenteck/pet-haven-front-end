@@ -7,8 +7,8 @@ import {
 } from '../types';
 
 /*========= USER ===========*/
-// const BASE_URL = 'https://pet-haven-api.herokuapp.com';
-const BASE_URL = 'http://localhost:5000';
+const BASE_URL = 'https://pet-haven-api.herokuapp.com';
+// const BASE_URL = 'http://localhost:5000';
 export function loginUser({email, password}){
 
     const request = axios.post(BASE_URL + '/api/users/login', {email, password}, {withCredentials: true})
